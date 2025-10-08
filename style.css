@@ -1,0 +1,506 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #db1c1c;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #b80000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+header nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #ffdd00;
+}
+
+/* ================= BERANDA: HERO SECTION ================= */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* biar gambar gak keluar dari area */
+}
+
+/* tambahkan ini di bawahnya */
+.hero img {
+  width: 110%;
+  max-height: 450px;
+  height: auto;
+  display: block;
+  object-fit: cover; /* biar memenuhi layar tanpa gepeng */
+}
+
+/* CTA Section (Lihat Menu) */
+.cta-section {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+/* Tombol interaktif di beranda */
+.btn-hero {
+  display: inline-block;
+  background: #b80000;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 35px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hero:hover {
+  background: #ffdd00;
+  color: #b80000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.hero::after {
+  content: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #ffdd00;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #b80000;
+  color: #fff;
+}
+
+/* ================= BERANDA: HIGHLIGHT SECTION ================= */
+.highlight {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 50px 20px;
+  gap: 20px;
+}
+
+.highlight-item {
+  flex: 1;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-item h3 {
+  color: #b80000;
+  margin-bottom: 10px;
+}
+
+.highlight-item p {
+  color: #444;
+  font-size: 15px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #b80000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+/* Supaya footer selalu di bawah meski konten sedikit */
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* isi konten dorong footer */
+}
+
+footer {
+  margin-top: auto; /* footer otomatis nempel bawah */
+}
+/* ==================== MENU SECTION ==================== */
+.menu {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Judul Menu */
+.menu h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #b80000;
+}
+
+/* Kontainer flex untuk kartu menu */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center; /* semua item termasuk baris terakhir di tengah */
+}
+
+/* Kartu Menu */
+.menu-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 240px; /* lebar tetap agar rapi */
+}
+
+/* Efek hover kartu menu */
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar di dalam kartu menu */
+.menu-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain; /* supaya gambar tidak kepotong */
+  background: #fff; /* latar belakang putih kalau ada ruang kosong */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Judul makanan */
+.menu-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Harga makanan */
+.menu-card p {
+  color: #b80000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .menu-card {
+    width: 45%; /* di tablet jadi 2 kolom */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-card {
+    width: 100%; /* di HP 1 kolom full */
+  }
+}
+/* ================== END MENU SECTION ================== */
+
+/* ==================== ABOUT HERO ==================== */
+.about-hero {
+  background: url("https://source.unsplash.com/1200x400/?indonesian-food")
+    no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(184, 0, 0, 0.6);
+}
+
+.about-hero-text {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.about-hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.about-hero-text p {
+  font-size: 18px;
+}
+/* ================== END ABOUT HERO ================== */
+
+/* Bagian Tentang */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(244, 3, 3, 0.949);
+}
+
+.about-container h2 {
+  color: #b80000;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* ==================== TESTIMONI SECTION ==================== */
+.testimoni {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.testimoni h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #b80000;
+}
+
+.testimoni-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimoni-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.testimoni-card p {
+  font-size: 17px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.testimoni-card h4 {
+  color: #b80000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Avatar foto profil */
+.testimoni-card .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #b80000;
+}
+
+/* Bintang rating */
+.stars {
+  color: #ffdd00;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* ================== END TESTIMONI SECTION ================== */
+
+/* bagian Rekomendasi */
+.galeri {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.galeri h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #b80000;
+}
+
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeri-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeri-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.galeri-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /*agar gambar tidak terpotong */
+  background-color: #fff; /* biar ada latar putih kalau ruang kosong */
+  display: block;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.galeri-card h3 {
+  padding: 12px;
+  font-size: 16px;
+  color: #f20c0c;
+}
+/* KONTAK */
+.kontak {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kontak h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #b80000;
+}
+
+.kontak p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.order-apps {
+  margin: 30px 0;
+}
+
+.order-apps h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.btn-gojek,
+.btn-grab {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-gojek {
+  background: #00aa13;
+  color: white;
+}
+
+.btn-gojek:hover {
+  background: #008f10;
+}
+
+.btn-grab {
+  background: #00b14f;
+  color: white;
+}
+.btn-maps {
+  background: #ffdd00;
+  color: #b80000;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-maps:hover {
+  background: #f5c400;
+  color: white;
+}
+
+.btn-grab:hover {
+  background: #008f3f;
+}
+
+/* MAPS */
+.maps {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.maps h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #b80000;
+}
