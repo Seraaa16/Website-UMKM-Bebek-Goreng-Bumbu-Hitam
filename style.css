@@ -470,10 +470,12 @@ footer {
 .btn-gojek:hover {
   background: #008f10;
 }
-
 .btn-grab {
   background: #00b14f;
   color: white;
+}
+.btn-grab:hover {
+  background: #008f3f;
 }
 .btn-maps {
   background: #ffdd00;
@@ -489,11 +491,7 @@ footer {
   color: white;
 }
 
-.btn-grab:hover {
-  background: #008f3f;
-}
-
-/* MAPS */
+/* BAGIAN MAPS */
 .maps {
   padding: 60px 20px;
   text-align: center;
@@ -504,4 +502,5 @@ footer {
   margin-bottom: 20px;
   color: #b80000;
 }
+
 
