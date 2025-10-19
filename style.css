@@ -48,8 +48,8 @@ header nav a.active {
 
 /* tambahkan ini di bawahnya */
 .hero img {
-  width: 110%;
-  max-height: 590px;
+  width: 100%;
+  max-height: 500px;
   height: auto;
   display: block;
   object-fit: cover; /* biar memenuhi layar tanpa gepeng */
@@ -547,6 +547,7 @@ footer {
   margin-bottom: 20px;
   color: #b80000;
 }
+
 
 
 
